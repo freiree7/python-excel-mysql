@@ -1,0 +1,70 @@
+#create database univap;
+#use univap;
+
+/*
+CREATE TABLE `univap`.`professores` (
+  `registro` INT NOT NULL,
+  `nomeprof` VARCHAR(50) NULL DEFAULT NULL,
+  `telefoneprof` VARCHAR(30) NULL DEFAULT NULL,
+  `idadeprof` INT NULL DEFAULT NULL,
+  `salarioprof` FLOAT NULL DEFAULT NULL,
+  PRIMARY KEY (`registro`));
+
+
+
+
+
+CREATE TABLE `univap`.`disciplinas` (
+  `codigodisc` INT NOT NULL,
+  `nomedisc` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`codigodisc`));
+  
+  
+  
+  
+  
+  CREATE TABLE `univap`.`disciplinasxprofessores` (
+  `codigodisciplinanocurso` int  NOT NULL,
+  `curso` varchar (50),
+  `cargahoraria` INT,
+  `anoletivo` INT,
+  `coddisciplina` INT,
+  `codprofessor` INT,
+  PRIMARY KEY (`codigodisciplinanocurso`),
+  INDEX `fk_disciplina_idx` (`coddisciplina` ASC),
+  INDEX `fk_professor_idx` (`codprofessor` ASC),
+  CONSTRAINT `fk_disciplina`
+    FOREIGN KEY (`coddisciplina`)
+    REFERENCES `disciplinas` (`codigodisc`) -- Corrija o nome da tabela referenciada, se necessário
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_professor`
+    FOREIGN KEY (`codprofessor`)
+    REFERENCES `professores` (`registro`) -- Corrija o nome da tabela referenciada, se necessário
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+);
+
+Tabela prof:
+
+INSERT INTO `univap`.`professores` (`registro`, `nomeprof`, `telefoneprof`, `idadeprof`, `salarioprof`) VALUES ('1', 'A', '999', '20', '100');
+INSERT INTO `univap`.`professores` (`registro`, `nomeprof`, `telefoneprof`, `idadeprof`, `salarioprof`) VALUES ('2', 'B', '998', '30', '200');
+INSERT INTO `univap`.`professores` (`registro`, `nomeprof`, `telefoneprof`, `idadeprof`, `salarioprof`) VALUES ('3', 'C', '997', '40', '300');
+INSERT INTO `univap`.`professores` (`registro`, `nomeprof`, `telefoneprof`, `idadeprof`, `salarioprof`) VALUES ('4', 'D', '996', '50', '400');
+
+
+Tabela disciplinasxprofessores:
+
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('1000', '1', '20', '2021', '100', '1');
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('2000', '2', '20', '2021', '100', '1');
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('3000', '1', '40', '2022', '200', '2');
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('4000', '2', '60', '2021', '300', '3');
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('5000', '3', '20', '2020', '200', '2');
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('6000', '4', '20', '2022', '100', '1');
+INSERT INTO `univap`.`disciplinasxprofessores` (`codigodisciplinanocurso`, `curso`, `cargahoraria`, `anoletivo`, `coddisciplina`, `codprofessor`) VALUES ('7000', '1', '80', '2021', '400', '4');
+
+*/
+
+
+
+
